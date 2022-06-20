@@ -11,9 +11,11 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body class="bg-slate-900">
-  <x-sidebar></x-sidebar>
-  {{ $slot }}
+<body class="bg-slate-900 overflow-hidden max-h-screen">
+  <div class="flex h-screen max-h-screen overflow-hidden">
+    <x-sidebar></x-sidebar>
+    {{ $slot }}
+  </div>
 </body>
 
 </html>
