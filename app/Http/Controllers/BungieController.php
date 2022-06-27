@@ -30,8 +30,8 @@
 
                 $response = json_decode($apiRequest->getBody());
                 return $response->Response;
-            } catch (Exception $e) {
-                echo $e;
+            } catch (\GuzzleHttp\Exception\GuzzleException $g) {
+                echo $g;
             }
             return null;
         }
